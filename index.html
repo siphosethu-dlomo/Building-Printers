@@ -4,9 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/index.js" defer></script>
     <title>Building Printers</title>
   </head>
   <body>
-    
+    <header class="primary-header">
+
+      <!-- navbar -->
+      <nav class="nav-container fixed">
+        <div class="logo">
+          <h1><a href="index.html">Building Printers</a></h1>
+        </div>
+        <button class="mobile-nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+          <span class="sr-only">Menu</span>
+        </button>
+        <ul id="primary-nav" class="primary-nav" data-visible="false">
+          <li><a href="about.html" target="_blank">About Us</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="services.html" target="_blank">Services</a></li>
+          <li><a href="#contacts">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- slider -->
+      <div class="slider">
+        <div class="slide current">
+          <div class="content">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut animi suscipit, molestias sed.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="content">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut animi suscipit, molestias sed.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="content">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut animi suscipit, molestias sed.</p>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button id="prev"><i class="fas fa-chevron-left"></i></button>
+        <button id="next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </header>
   </body>
 </html>
