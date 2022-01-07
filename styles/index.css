@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css?family=Hind:400|Montserrat:400');
+
+*, ::after,
+::before {
+  box-sizing: border-box;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+:root {
+  /* fonts */
+  --headingFont: 'Montserrat', sans-serif;
+  --bodyFont: 'Hind', sans-serif;
+  --smallTextFont: 0.7em;
+}
+
+/* font & font pairing */
+
+p {
+  margin-bottom: 1.5rem;
+  max-width: 40em;
+}
+
+h1,
+h2, 
+h3, 
+h4, 
+h5 {
+  margin: 0;
+  margin-bottom: 1.38rem;
+  font-family: var(--headingFont);
+  font-weight: 400;
+  line-height: 1.3;
+  text-transform: capitalize;
+}
+
+.logo h1 {
+  margin-bottom: 0px;
+}
+
+h1 {
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small, 
+.text-small {
+  font-size: var(--smallTextFont);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* font & font pairing */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* header => navigation and slider */
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute; 
+  width: 100%;
+  z-index: 999;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.nav-container a {
+  color: #ffffff;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.primary-nav {
+  display: flex;
+  gap: 50px;
+  padding: 0px 20px;
+}
+
+.primary-nav a {
+  font-size: 1rem;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.slide.current {
+  opacity: 1;
+}
+
+.slide .content {
+  position: absolute;
+  bottom: 40px;
+  left: -600px;
+  opacity: 0;
+  width: 600px;
+  background-color: #01d487c5;
+  color: #333;
+  padding: 35px;
+}
+
+.slide .content p {
+  color: #ffffff;
+}
+
+.slide.current .content {
+  opacity: 1;
+  transform: translateX(600px);
+  transition: all 0.7s ease-in-out 0.3s;
+}
+
+.buttons button#next {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+}
+
+.buttons button#prev {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+}
+
+.buttons button {
+  border: 3px solid transparent;
+  background-color: #01d487a6;
+  color: #fff;
+  cursor: pointer;
+  padding: 13px 15px;
+  border-radius: 00px;
+  outline: none;
+  font-size: px;
+}
+
+.buttons button:hover {
+  background-color: #04ffa3;
+  color: #fff;
+  opacity: 0.7;
+}
+
+.slide:first-child {
+  background: url("../images/slider-1.jpg") no-repeat center center/cover;
+}
+
+.slide:nth-child(2) {
+  background: url("../images/milivoj-kuhar-Te48TPzdcU8-unsplash.jpg") no-repeat
+    center top/cover;
+}
+
+.slide:nth-child(3) {
+  background: url("../images/slider-3.jpg") no-repeat center top/cover;
+}
+
+/* header => navigation and slider */
+
+
+/*==============================================================
+MOBILE 
+===============================================================*/
+
+/* header => navigation and slider */
+
+@media (max-width: 35em) {
+
+  .primary-nav {
+    position: fixed;
+    z-index: 1000;
+    inset: 0% 0% 0% 50%;
+    flex-direction: column;
+    padding: min(30vh, 2rem) 1em;
+    background: steelblue;
+    transform: translateX(100%);
+    transition: transform 350ms ease-in-out;
+  }
+
+  .primary-nav[data-visible="true"] {
+    transform: translateX(0%);
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    background-color: transparent;
+    background-image: url("../images/icon-hamburger.svg");
+    background-repeat: no-repeat;
+    width: 2rem;
+    border: 0;
+    aspect-ratio: 1;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .mobile-nav-toggle[aria-expanded="true"] {
+    background-image: url("../images/icon-close.svg");
+  }
+}
+
+/* header => navigation and slider */
