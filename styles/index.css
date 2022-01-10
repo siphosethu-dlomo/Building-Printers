@@ -12,15 +12,39 @@ html {
   font-size: 100%;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 :root {
   /* fonts */
   --headingFont: 'Montserrat', sans-serif;
   --bodyFont: 'Hind', sans-serif;
   --smallTextFont: 0.7em;
+
+  /* colors */
+  --primary-100: #d8e6fd;
+  --primary-200: #b1cdfb;
+  --primary-300: #89b4fa;
+  --primary-400: #629bf8;
+  --primary-500: #3b82f6;
+  --primary-600: #2f68c5;
+  --primary-700: #234e94;
+  --primary-800: #183462;
+  --primary-900: #0c1a31;
+
+  /* rest of the vars */
+  --grey-900: #0f172a;
+  --textColor: var(--grey-900);
+  --borderRadius: 0.25rem;
+}
+
+/*==============================================================
+DESKTOP STYLES
+===============================================================*/
+
+body {
+  overflow-x: hidden;
+  font-family: var(--bodyFont);
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--textColor);
 }
 
 /* font & font pairing */
@@ -45,6 +69,7 @@ h5 {
 
 .logo h1 {
   margin-bottom: 0px;
+  font-weight: 400;
 }
 
 h1 {
@@ -78,19 +103,8 @@ a {
 
 /* font & font pairing */
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
 
-/* header => navigation and slider */
+/* HEADER => navigation and slider */
 
 .nav-container {
   display: flex;
@@ -99,32 +113,40 @@ a {
   position: absolute; 
   width: 100%;
   z-index: 999;
-}
-
-.fixed {
-  position: fixed;
+  padding: 20px 25px;
 }
 
 .nav-container a {
   color: #ffffff;
 }
 
-.logo h1 {
-  font-size: 1.5rem;
+.logo {
+  background-color: var(--primary-500);
+  padding: 5px 10px;
+  border-radius: var(--borderRadius);
 }
 
-.mobile-nav-toggle {
-  display: none;
+.logo h1 {
+  font-size: 2.1rem;
 }
 
 .primary-nav {
   display: flex;
-  gap: 50px;
+  gap: 20px;
   padding: 0px 20px;
 }
 
 .primary-nav a {
-  font-size: 1rem;
+  font-size: 20px;
+}
+
+.primary-nav li {
+  padding: 5px 8px;
+}
+
+.primary-nav li:hover {
+  background-color: var(--primary-500);
+  border-radius: var(--borderRadius);
 }
 
 .slider {
@@ -148,13 +170,13 @@ a {
   opacity: 1;
 }
 
-.slide .content {
+.content {
   position: absolute;
   bottom: 40px;
   left: -600px;
   opacity: 0;
   width: 600px;
-  background-color: #01d487c5;
+  background-color: var(--primary-500);
   color: #333;
   padding: 35px;
 }
@@ -183,19 +205,19 @@ a {
 
 .buttons button {
   border: 3px solid transparent;
-  background-color: #01d487a6;
+  background-color: var(--primary-500);
   color: #fff;
   cursor: pointer;
   padding: 13px 15px;
-  border-radius: 00px;
+  border-radius: 100%;
   outline: none;
   font-size: px;
 }
 
 .buttons button:hover {
-  background-color: #04ffa3;
+  background-color: var(--primary-700);
   color: #fff;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .slide:first-child {
@@ -211,14 +233,38 @@ a {
   background: url("../images/slider-3.jpg") no-repeat center top/cover;
 }
 
-/* header => navigation and slider */
+.mobile-nav-toggle {
+  display: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.active {
+  background-color: var(--primary-500);
+}
+
+/* HEADER => navigation and slider */
 
 
 /*==============================================================
-MOBILE 
+MOBILE STYLES
 ===============================================================*/
 
-/* header => navigation and slider */
+/* HEADER => navigation and slider */
 
 @media (max-width: 35em) {
 
@@ -256,4 +302,4 @@ MOBILE
   }
 }
 
-/* header => navigation and slider */
+/* HEADER => navigation and slider */

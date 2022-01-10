@@ -71,3 +71,50 @@ prev.addEventListener('click', function(e) {
 if (auto) {
   slideInterval = setInterval(nextSlide, intervalTime)
 }
+
+// navbar intersection observer
+
+const header = document.querySelector('header');
+const nav = document.querySelector('nav');
+const navListItems = document.querySelectorAll('.primary-nav li');
+
+const hoverOnNavListItems = {
+
+  addingHover: addHoverNavOnListItems = () => {
+    navListItems.forEach( navListItem => {
+      navListItem.addEventListener('mouseover', (e) => {
+        e.target.style.backgroundColor = 'var(--primary-700)';
+        
+        setTimeout(() => {
+          e.target.style.backgroundColor = '';
+        }, 500)
+      });
+    });
+  },
+
+  removingHover: removeHoverNavOnListItems = () => {
+    navListItems.forEach( navListItem => {
+      navListItem.addEventListener('mouseover', (e) => {
+        e.target.style.backgroundColor = '';
+      });
+    });
+  }
+
+};
+
+const observerCallback = entries => {
+  if(!entries[0].isIntersecting) {
+    nav.classList.add('active');
+    hoverOnNavListItems.addingHover();
+  } else {
+    nav.classList.remove('active');
+    hoverOnNavListItems.removingHover();
+  }
+};
+
+const observerOptions = {
+  rootMargin: '-550px 0px 0px 0px',
+};
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+observer.observe(header);
