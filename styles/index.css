@@ -12,6 +12,10 @@ html {
   font-size: 100%;
 }
 
+/*==============================================================
+                              VARIABLES
+===============================================================*/
+
 :root {
   /* fonts */
   --headingFont: 'Montserrat', sans-serif;
@@ -29,6 +33,15 @@ html {
   --primary-800: #183462;
   --primary-900: #0c1a31;
 
+    /* box shadow */
+
+    /* default state */
+    --shadow-1: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); 
+    --shadow-2: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+     /* hover state */
+    --shadow-3: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-4: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
   /* rest of the vars */
   --grey-900: #0f172a;
   --textColor: var(--grey-900);
@@ -36,7 +49,7 @@ html {
 }
 
 /*==============================================================
-DESKTOP STYLES
+                            DESKTOP STYLES
 ===============================================================*/
 
 body {
@@ -106,6 +119,22 @@ a {
 
 /* HEADER => navigation and slider */
 
+header {
+  background: url("../images/slider-3.jpg") no-repeat center top/cover;
+  height: 100vh;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.25;
+}
+
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -121,7 +150,6 @@ a {
 }
 
 .logo {
-  background-color: var(--primary-500);
   padding: 5px 10px;
   border-radius: var(--borderRadius);
 }
@@ -142,6 +170,7 @@ a {
 
 .primary-nav li {
   padding: 5px 8px;
+  transition: all 0.4s ease-in-out;
 }
 
 .primary-nav li:hover {
@@ -149,92 +178,51 @@ a {
   border-radius: var(--borderRadius);
 }
 
-.slider {
-  position: relative;
-  overflow: hidden;
-  height: 100vh;
-  width: 100vw;
-}
-
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out;
-}
-
-.slide.current {
-  opacity: 1;
-}
-
-.content {
-  position: absolute;
-  bottom: 40px;
-  left: -600px;
-  opacity: 0;
-  width: 600px;
-  background-color: var(--primary-500);
-  color: #333;
-  padding: 35px;
-}
-
-.slide .content p {
-  color: #ffffff;
-}
-
-.slide.current .content {
-  opacity: 1;
-  transform: translateX(600px);
-  transition: all 0.7s ease-in-out 0.3s;
-}
-
-.buttons button#next {
-  position: absolute;
-  top: 50%;
-  right: 15px;
-}
-
-.buttons button#prev {
-  position: absolute;
-  top: 50%;
-  left: 15px;
-}
-
-.buttons button {
-  border: 3px solid transparent;
-  background-color: var(--primary-500);
-  color: #fff;
-  cursor: pointer;
-  padding: 13px 15px;
-  border-radius: 100%;
-  outline: none;
-  font-size: px;
-}
-
-.buttons button:hover {
-  background-color: var(--primary-700);
-  color: #fff;
-  opacity: 1;
-}
-
-.slide:first-child {
-  background: url("../images/slider-1.jpg") no-repeat center center/cover;
-}
-
-.slide:nth-child(2) {
-  background: url("../images/milivoj-kuhar-Te48TPzdcU8-unsplash.jpg") no-repeat
-    center top/cover;
-}
-
-.slide:nth-child(3) {
-  background: url("../images/slider-3.jpg") no-repeat center top/cover;
-}
-
 .mobile-nav-toggle {
   display: none;
+}
+
+.headline {
+  color: #ffffff;
+  position: absolute; 
+  width: 100%;
+  z-index: 998;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.headline h1 {
+  font-size: 4.5rem;
+}
+
+.headline a {
+  cursor: pointer;
+  color: var(--white);
+  background: var(--primary-500);
+  border: transparent;
+  border-radius: var(--borderRadius);
+  letter-spacing: var(--letterSpacing);
+  padding: 0.5rem 0.8rem;
+  transition: var(--transition);
+  text-transform: capitalize;
+  display: inline-block;
+  font-weight: bold;
+  transition-property: background-color, transform;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+  animation: headerButton 2.4s ease-in-out infinite alternate;
+}
+
+@keyframes headerButton {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.04);
+  }
 }
 
 .sr-only {
@@ -255,13 +243,14 @@ a {
 
 .active {
   background-color: var(--primary-500);
+  transition: all 0.15s ease-in-out;
 }
 
 /* HEADER => navigation and slider */
 
 
 /*==============================================================
-MOBILE STYLES
+                            MOBILE STYLES
 ===============================================================*/
 
 /* HEADER => navigation and slider */
