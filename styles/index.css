@@ -142,7 +142,7 @@ header::after {
   position: absolute; 
   width: 100%;
   z-index: 999;
-  padding: 20px 25px;
+  padding: 16px 35px;
 }
 
 .nav-container a {
@@ -150,7 +150,6 @@ header::after {
 }
 
 .logo {
-  padding: 5px 10px;
   border-radius: var(--borderRadius);
 }
 
@@ -161,7 +160,6 @@ header::after {
 .primary-nav {
   display: flex;
   gap: 20px;
-  padding: 0px 20px;
 }
 
 .primary-nav a {
