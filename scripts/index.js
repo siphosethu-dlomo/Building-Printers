@@ -60,3 +60,45 @@ const observerOptions = {
 
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 observer.observe(header);
+
+// services section
+
+const serviceCardInformation = [
+  {
+    cardImageScr: "images/reno.jpg",
+    cardImageAlt: "Renovations",
+    cardText: "Renovations"
+  },
+  {
+    cardImageScr: "images/foundation.jpg",
+    cardImageAlt: "Foundatons",
+    cardText: "Foundatons"
+  },
+  {
+    cardImageScr: "images/capenters.jpg",
+    cardImageAlt: "Capentry & Joinery",
+    cardText: "Capentry & Joinery"
+  },
+];
+
+const serviceCardGenerator = serviceCardInformation.map((card) => {
+  return `
+  <div class="card-container">
+    <div class="card-image-holder">
+      <img src="${card.cardImageScr}" alt="${card.cardImageAlt}">
+    </div>
+    <div class="card-text">${card.cardText}</div>
+  </div>
+  `
+}).join('');
+
+document.querySelector('.card-grid').innerHTML = serviceCardGenerator;
+
+const buttonContainer = document.createElement('div');
+const button = document.createElement('a');
+button.setAttribute('href', '#');
+buttonContainer.classList.add('button-container');
+button.textContent = 'more services';
+buttonContainer.appendChild(button);
+
+document.querySelector('.services').appendChild(buttonContainer);
