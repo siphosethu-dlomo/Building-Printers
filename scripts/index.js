@@ -61,7 +61,7 @@ const observerOptions = {
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 observer.observe(header);
 
-// services section
+// SERVICES SECTION
 
 const serviceCardInformation = [
   {
@@ -81,6 +81,31 @@ const serviceCardInformation = [
   },
 ];
 
+// section titles
+const titles = {
+  servicesTitle: 'Our Services',
+  quotesTitle: 'Need A Quote?',
+};
+
+const{servicesTitle, quotesTitle} = titles;
+
+function generateTitles(title) {
+  const titleContainer = document.createElement('div');
+  const titleElement = document.createElement('h2');
+  const titleUnderline = document.createElement('div');
+  titleContainer.appendChild(titleElement);
+  titleContainer.appendChild(titleUnderline);
+  titleContainer.classList.add('title');
+  titleUnderline.classList.add('title-underline');
+  titleElement.textContent = title;
+  return titleContainer;
+}
+
+const servicesSectionTitle = generateTitles(`${servicesTitle}`);
+
+document.querySelector('.services-section-container').prepend(servicesSectionTitle);
+
+// generating services cards
 const serviceCardGenerator = serviceCardInformation.map((card) => {
   return `
   <div class="card-container">
@@ -92,8 +117,9 @@ const serviceCardGenerator = serviceCardInformation.map((card) => {
   `
 }).join('');
 
-document.querySelector('.card-grid').innerHTML = serviceCardGenerator;
+document.querySelector('.cards-grid').innerHTML = serviceCardGenerator;
 
+// more services button
 const buttonContainer = document.createElement('div');
 const button = document.createElement('a');
 button.setAttribute('href', '#');
@@ -101,4 +127,10 @@ buttonContainer.classList.add('button-container');
 button.textContent = 'more services';
 buttonContainer.appendChild(button);
 
-document.querySelector('.services').appendChild(buttonContainer);
+document.querySelector('.services-section-container').appendChild(buttonContainer);
+
+// QUOTES SECTIONS
+
+const quotesSectionTitle = generateTitles(`${quotesTitle}`);
+document.querySelector('.quotes-section-container').prepend(quotesSectionTitle);
+
