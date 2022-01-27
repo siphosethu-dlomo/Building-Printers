@@ -71,8 +71,8 @@ const serviceCardInformation = [
   },
   {
     cardImageScr: "images/foundation.jpg",
-    cardImageAlt: "Foundations",
-    cardText: "Foundations"
+    cardImageAlt: "Foundatons",
+    cardText: "Foundatons"
   },
   {
     cardImageScr: "images/capenters.jpg",
