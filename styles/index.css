@@ -35,6 +35,7 @@ html {
   --primary-900: #0c1a31;
 
   --white: #ffffff;
+  --grey-50: #f8fafc;
   --grey-200: #e2e8f0;
   --grey-400: #94a3b8;
   --grey-900: #0f172a;
@@ -43,12 +44,13 @@ html {
 
     /* default state */
     --shadow-1: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); 
-    --shadow-2: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-2: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 -4px 4px -2px rgb(0 0 0 / 0.1);
      /* hover state */
     --shadow-3: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     --shadow-4: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 
   /* rest of the vars */
+  --backgroundColor: var(--grey-50);
   --textColor: var(--grey-900);
   --borderRadius: 0.25rem;
   --letterSpacing: 1px;
@@ -283,38 +285,25 @@ header::after {
 .button-container a {
   cursor: pointer;
   color: var(--white);
-  background: var(--primary-500);
+  background-color: var(--primary-500);
   border-radius: var(--borderRadius);
   letter-spacing: var(--letterSpacing);
   padding: 0.5rem 3rem;
-  transition: var(--transition);
+  transition: background-color 0.4s ease-in-out;
   text-transform: capitalize;
   display: inline-block;
   font-weight: bold;
 }
 
 .section-background-color {
-  background-color: var(--primary-00);
+  background-color: var(--primary-100);
 }
 
 .form-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 45px;
   max-width: var(--max-width);
   margin-bottom: 48px;
-}
-
-.form .title-underline {
-  background: var(--primary-500);
-  width: 7rem;
-  height: 0.25rem;
-  margin-top: -1rem;
-}
-
-.form-img {
-  border-radius: var(--borderRadius);
-  overflow: hidden;
 }
 
 .form-img img {
@@ -326,13 +315,22 @@ header::after {
 }
 
 .form {
-  border-radius: var(--borderRadius);
+  /* border-radius: var(--borderRadius); */
   box-shadow: var(--shadow-2);
-  padding: 0rem 2.5rem 1rem 2.5rem;
+  padding: 3rem 4.5rem 3rem 4.5rem;
+  background-color: var(--white);
 }
 
 .form h4 {
   margin-top: -3.5px;
+  margin-bottom: 0px;
+}
+
+.form .title-underline {
+  background: var(--primary-500);
+  width: 9rem;
+  height: 0.25rem;
+  margin: 5px 0px 25px 0px
 }
 
 .form-row {
@@ -365,7 +363,8 @@ header::after {
 }
 
 .form-textarea {
-  height: 7rem;
+  font-family: inherit;
+  height: 4rem;
 }
 
 .form-input::placeholder {
@@ -381,7 +380,7 @@ header::after {
   border-radius: var(--borderRadius);
   letter-spacing: var(--letterSpacing);
   padding: 0.5rem 3rem;
-  transition: var(--transition);
+  transition: background-color 0.4s ease-in-out;
   text-transform: capitalize;
   display: inline-block;
   font-weight: bold;
@@ -389,6 +388,13 @@ header::after {
 
 .btn-block {
   width: 100%;
+}
+
+.btn:hover, 
+.button-container a:hover,
+.headline a:hover {
+  background: var(--primary-700);
+  box-shadow: var(--shadow-3);
 }
 
 .sr-only {
