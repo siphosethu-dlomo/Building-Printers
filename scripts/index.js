@@ -61,7 +61,7 @@ const observerOptions = {
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 observer.observe(header);
 
-// SERVICES SECTION
+
 
 const serviceCardInformation = [
   {
@@ -81,13 +81,38 @@ const serviceCardInformation = [
   },
 ];
 
+const teamSectionCardInformation = [
+  {
+    cardImageScr: "images/reno.jpg",
+    cardImageAlt: "Zukhanye May",
+    teamMember: "Zukhanye May",
+    position: "CEO",
+
+  },
+  {
+    cardImageScr: "images/foundation.jpg",
+    cardImageAlt: "Jane Doe",
+    teamMember: "Jane Doe",
+    position: "COO",
+  },
+  {
+    cardImageScr: "images/capenters.jpg",
+    cardImageAlt: "John Doe",
+    teamMember: "John Doe",
+    position: "CFO",
+  },
+];
+
+// SERVICES SECTION
+
 // section titles
 const titles = {
   servicesTitle: 'Our Services',
   quotesTitle: 'Need A Quote?',
+  teamTitle: 'Meet The Team',
 };
 
-const{servicesTitle, quotesTitle} = titles;
+const{servicesTitle, quotesTitle, teamTitle} = titles;
 
 function generateTitles(title) {
   const titleContainer = document.createElement('div');
@@ -117,7 +142,7 @@ const serviceCardGenerator = serviceCardInformation.map((card) => {
   `
 }).join('');
 
-document.querySelector('.cards-grid').innerHTML = serviceCardGenerator;
+document.querySelector('.services-card-grid').innerHTML = serviceCardGenerator;
 
 // more services button
 const buttonContainer = document.createElement('div');
@@ -158,3 +183,23 @@ inputs.forEach(input => {
     validate(e.target, patterns[e.target.attributes.name.value]);
   });
 });
+
+// TEAM SECTION
+
+const teamSectionTitle = generateTitles(`${teamTitle}`);
+document.querySelector('.team-section-container').prepend(teamSectionTitle);
+
+// generating team members cards
+const teamMembersCardGenerator = teamSectionCardInformation.map((card) => {
+  return `
+  <div class="card-container">
+    <div class="card-image-holder">
+      <img src="${card.cardImageScr}" alt="${card.cardImageAlt}">
+    </div>
+    <div class="card-text"><b>${card.teamMember}</b></div>
+    <div class="card-text">${card.position}</div>
+  </div>
+  `
+}).join('');
+
+document.querySelector('.team-card-grid').innerHTML = teamMembersCardGenerator;
