@@ -39,6 +39,8 @@ html {
   --grey-200: #e2e8f0;
   --grey-400: #94a3b8;
   --grey-900: #0f172a;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
 
     /* box shadow */
 
@@ -416,6 +418,14 @@ header::after {
 .active {
   background-color: var(--primary-500);
   transition: all 0.15s ease-in-out;
+}
+
+.is-valid {
+  border-color: var(--success-color);
+}
+
+.is-invalid {
+  border-color: var(--error-color);
 }
 
 /* HEADER => navigation and slider */
