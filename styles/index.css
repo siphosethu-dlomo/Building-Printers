@@ -240,7 +240,8 @@ header::after {
 }
 
 .services-section-container,
-.quotes-section-container {
+.quotes-section-container,
+.team-section-container {
   padding: 72px 0px;
 }
 
@@ -257,7 +258,8 @@ header::after {
   margin-top: -1rem;
 }
 
-.cards-grid {
+.services-card-grid,
+.team-card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 25px;
