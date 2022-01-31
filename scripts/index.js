@@ -161,7 +161,7 @@ document.querySelector('.services-section-container').appendChild(buttonContaine
 const quotesSectionTitle = generateTitles(`${quotesTitle}`);
 document.querySelector('.quotes-section-container').prepend(quotesSectionTitle);
 
-// form validation
+// Form Validation
 const inputs = document.querySelectorAll('input');
 
 // regex patterns
