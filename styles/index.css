@@ -359,11 +359,6 @@ header::after {
   transition: border-color 0.5s ;
 }
 
-.form-input:focus,
-.form-textarea:focus {
-  border-color: var(--primary-200);
-}
-
 .form-textarea {
   font-family: inherit;
   height: 4rem;
