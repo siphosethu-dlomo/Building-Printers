@@ -83,20 +83,22 @@ const serviceCardInformation = [
 
 const teamSectionCardInformation = [
   {
-    cardImageScr: "images/reno.jpg",
+    cardImageScr: "images/alex-starnes.jpg",
     cardImageAlt: "Zukhanye May",
     teamMember: "Zukhanye May",
     position: "CEO",
 
   },
+
   {
-    cardImageScr: "images/foundation.jpg",
-    cardImageAlt: "Jane Doe",
+    cardImageScr: "images/may-gauthier.jpg",
+    cardImageAlt: "May Gauthier",
     teamMember: "Jane Doe",
     position: "COO",
   },
+  
   {
-    cardImageScr: "images/capenters.jpg",
+    cardImageScr: "images/john doe.jpg",
     cardImageAlt: "John Doe",
     teamMember: "John Doe",
     position: "CFO",
@@ -137,7 +139,7 @@ const serviceCardGenerator = serviceCardInformation.map((card) => {
     <div class="card-image-holder">
       <img src="${card.cardImageScr}" alt="${card.cardImageAlt}">
     </div>
-    <div class="card-text">${card.cardText}</div>
+    <div class="card-text"><span>${card.cardText}</span></div>
   </div>
   `
 }).join('');
@@ -196,8 +198,8 @@ const teamMembersCardGenerator = teamSectionCardInformation.map((card) => {
     <div class="card-image-holder">
       <img src="${card.cardImageScr}" alt="${card.cardImageAlt}">
     </div>
-    <div class="card-text"><b>${card.teamMember}</b></div>
-    <div class="card-text">${card.position}</div>
+    <div class="card-text"><b><span>${card.teamMember}</span></b></div>
+    <div class="card-text"><span>${card.position}</span></div>
   </div>
   `
 }).join('');

@@ -268,13 +268,16 @@ header::after {
 
 .card-container {
   box-shadow: var(--shadow-2);
-  border:  var(--primary-100) 1px solid;
+  border: var(--primary-100) 1px solid;
   border-radius: var(--borderRadius);
   overflow: hidden;
+  padding: 5px;
+  background-image: url(../images/blob-scene-haikei.png);
 }
 
 .card-image-holder img {
   width: 100%;
+  border-radius: var(--borderRadius);
 }
 
 .card-text {
@@ -315,7 +318,6 @@ header::after {
   height: 100%;
   display: block;
   object-fit: cover;
-  
 }
 
 .form {
