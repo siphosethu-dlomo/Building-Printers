@@ -112,9 +112,10 @@ const titles = {
   servicesTitle: 'Our Services',
   quotesTitle: 'Need A Quote?',
   teamTitle: 'Meet The Team',
+  aboutTitle: 'About us',
 };
 
-const{servicesTitle, quotesTitle, teamTitle} = titles;
+const{servicesTitle, quotesTitle, teamTitle, aboutTitle} = titles;
 
 function generateTitles(title) {
   const titleContainer = document.createElement('div');
@@ -205,3 +206,8 @@ const teamMembersCardGenerator = teamSectionCardInformation.map((card) => {
 }).join('');
 
 document.querySelector('.team-card-grid').innerHTML = teamMembersCardGenerator;
+
+// ABOUT SECTION
+
+const aboutSectionTitle = generateTitles(`${aboutTitle}`);
+document.querySelector('.about-section-container').prepend(aboutSectionTitle);
