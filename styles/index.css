@@ -424,6 +424,11 @@ header::after {
   font-weight: bold;
 }
 
+.footer-main-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .btn-block {
   width: 100%;
 }
