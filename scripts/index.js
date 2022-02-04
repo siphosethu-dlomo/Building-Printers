@@ -211,3 +211,7 @@ document.querySelector('.team-card-grid').innerHTML = teamMembersCardGenerator;
 
 const aboutSectionTitle = generateTitles(`${aboutTitle}`);
 document.querySelector('.about-section-container').prepend(aboutSectionTitle);
+
+// FOOTER
+
+
