@@ -74,11 +74,6 @@ body {
 
 /* font & font pairing */
 
-p {
-  margin-bottom: 1.5rem;
-  max-width: 40em;
-}
-
 h1,
 h2, 
 h3, 
@@ -424,9 +419,33 @@ header::after {
   font-weight: bold;
 }
 
-.footer-main-content {
+.footer-top-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.footer-contacts li {
+  display: flex;
+  column-gap: 10px;
+}
+
+.fas:not(.fa-map-marker-alt){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.fa-map-marker-alt {
+  padding-top: 6px;
+}
+
+address {
+  font-style: normal;
+}
+
+.footer-bottom-content {
+  text-align: center;
 }
 
 .btn-block {
