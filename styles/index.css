@@ -39,6 +39,7 @@ html {
   --grey-50: #f8fafc;
   --grey-200: #e2e8f0;
   --grey-400: #94a3b8;
+  --grey-600: #475569;
   --grey-900: #0f172a;
   --success-color: #5cb85c;
   --error-color: #d9534f;
@@ -238,7 +239,8 @@ header::after {
 .services-section-container,
 .quotes-section-container,
 .team-section-container,
-.about-section-container {
+.about-section-container,
+footer {
   padding: 72px 0px;
 }
 
@@ -419,14 +421,44 @@ header::after {
   font-weight: bold;
 }
 
+footer {
+  background-color: var(--grey-50)
+}
+
+footer .width-cintainer {
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-1);
+  background-color: var(--primary-100);
+  padding: 50px;
+}
+
 .footer-top-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+}
+
+footer li:not(.location) {
+  margin-bottom: 3px;
 }
 
 .footer-contacts li {
   display: flex;
   column-gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-top-content a,
+.footer-bottom-content a,
+address {
+  color: var(--grey-600);
+}
+
+.footer-top-content a:hover,
+.footer-bottom-content a:hover {
+  color: var(--primary-500);
+  transition: color 0.2s ease-in-out;
 }
 
 .fas:not(.fa-map-marker-alt){
@@ -437,8 +469,8 @@ header::after {
 }
 
 .fa-map-marker-alt {
-  padding-top: 6px;
-}
+  padding-bottom: 62px;
+} 
 
 address {
   font-style: normal;
@@ -446,6 +478,23 @@ address {
 
 .footer-bottom-content {
   text-align: center;
+  margin-top: 65px;
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  margin-bottom: 10px;
+}
+
+.fab {
+  font-size: 1.4rem;
+  color: var(--primary-700);
+}
+
+.footer-bottom-content a {
+  text-decoration: underline;
 }
 
 .btn-block {
