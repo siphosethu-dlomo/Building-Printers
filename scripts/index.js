@@ -227,7 +227,7 @@ footerContent = [
     copyright: 'copyright',
     year: currentYear,
     rights: 'All Rights Reserved',
-    privacyPolicy: 'Priivsacy Policy'
+    privacyPolicy: 'Privacy Policy'
   }
 ];
 
@@ -275,4 +275,4 @@ const generateFooter = footerContent.map((content) => {
   `
 }).join('');
 
-document.querySelector('.footer-width-cintainer').innerHTML = generateFooter;
+document.querySelector('.footer-width-container').innerHTML = generateFooter;
