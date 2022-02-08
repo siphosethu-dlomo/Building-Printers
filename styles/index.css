@@ -143,6 +143,38 @@ header::after {
   opacity: 0.25;
 }
 
+.home-page-header {
+  background: url("../images/slider-3.jpg") no-repeat center top/cover;
+  height: 100vh;
+}
+
+.home-page-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.25;
+}
+
+.about-page-header {
+  background: url("../images/service-meeting.jpg") no-repeat center top/cover;
+  height: 100vh;
+}
+
+.about-page-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(43, 41, 38);
+  opacity: 0.35;
+}
+
 .nav-container {
   display: flex;
   justify-content: space-between;

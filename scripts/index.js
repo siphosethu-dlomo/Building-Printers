@@ -113,9 +113,10 @@ const titles = {
   quotesTitle: 'Need A Quote?',
   teamTitle: 'Meet The Team',
   aboutTitle: 'About us',
+  aboutPageTitle: 'Welcome to Building Printers'
 };
 
-const{servicesTitle, quotesTitle, teamTitle, aboutTitle} = titles;
+const{servicesTitle, quotesTitle, teamTitle, aboutTitle, aboutPageTitle} = titles;
 
 function generateTitles(title) {
   const titleContainer = document.createElement('div');
@@ -276,3 +277,6 @@ const generateFooter = footerContent.map((content) => {
 }).join('');
 
 document.querySelector('.footer-width-container').innerHTML = generateFooter;
+
+// ABOUT PAGE
+
