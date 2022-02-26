@@ -1,4 +1,4 @@
-import { titles, generateTitles } from "./index.js";
+import { titles, generateTitles } from "./titlesGenerator.js";
 
 
 export function servicesSectionHeading() {
@@ -25,3 +25,8 @@ export function aboutSectionHeading() {
   document.querySelector('.about-section-container').prepend(aboutSectionTitle);
 };
 
+export function aboutPage() {
+  const {aboutPageTitle} = titles;
+  const aboutPageMainTitle = generateTitles(`${aboutPageTitle}`);
+  document.querySelector('.about-us-page-container').prepend(aboutPageMainTitle);
+};
