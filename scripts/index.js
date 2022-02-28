@@ -19,29 +19,6 @@ hamburgerMenu();
 // navbar intersection observer
 intersectionObserver();
 
-// section titles
-export const titles = {
-  servicesTitle: 'Our Services',
-  quotesTitle: 'Need A Quote?',
-  teamTitle: 'Meet The Team',
-  aboutTitle: 'About us',
-  aboutPageTitle: 'Welcome to Building Printers'
-};
-
-// export const{servicesTitle, quotesTitle, teamTitle, aboutTitle, aboutPageTitle} = titles;
-
-export function generateTitles(title) {
-  const titleContainer = document.createElement('div');
-  const titleElement = document.createElement('h2');
-  const titleUnderline = document.createElement('div');
-  titleContainer.appendChild(titleElement);
-  titleContainer.appendChild(titleUnderline);
-  titleContainer.classList.add('title');
-  titleUnderline.classList.add('title-underline');
-  titleElement.textContent = title;
-  return titleContainer;
-};
-
 // SERVICES SECTION
 servicesSectionHeading()
 servicesSection();

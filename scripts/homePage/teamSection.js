@@ -1,4 +1,4 @@
-export default function teamSection() {
+export default function teamSectionMainContent() {
   const teamSectionCardInformation = [
     {
       cardImageScr: "images/alex-starnes.jpg",
