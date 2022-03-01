@@ -1,6 +1,7 @@
 import hamburgerMenu from "./hamburgerMenu.js";
 import intersectionObserver from "./intersectionObserver.js";
 import {aboutPage} from "./sectionTitles.js";
+import footerSection from "./footer.js"
 
 // hamburger menu
 hamburgerMenu();
@@ -52,3 +53,6 @@ const companyInformationCardGenerator = companyCardInformation.map((card) => {
 }).join('');
 
 document.querySelector('.about-page-main-content').innerHTML = companyInformationCardGenerator;
+
+// FOOTER 
+footerSection();

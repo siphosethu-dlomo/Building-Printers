@@ -1,5 +1,3 @@
-// FOOTER
-
 export default function footerSection() {
   const currentYear = new Date().getFullYear();
 
