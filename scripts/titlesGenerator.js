@@ -4,7 +4,9 @@ export const titles = {
   quotesTitle: 'Need A Quote?',
   teamTitle: 'Meet The Team',
   aboutTitle: 'About us',
-  aboutPageTitle: 'Welcome to Building Printers'
+  aboutPageTitle: 'Welcome to Building Printers',
+  domesticServicesTitle: 'What We Offer',
+  subContractServicesTitle: 'Sub-Contracting',
 };
 
 export function generateTitles(title) {
