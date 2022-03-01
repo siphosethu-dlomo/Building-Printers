@@ -30,3 +30,15 @@ export function aboutPage() {
   const aboutPageMainTitle = generateTitles(`${aboutPageTitle}`);
   document.querySelector('.about-us-page-container').prepend(aboutPageMainTitle);
 };
+
+export function domesticServices() {
+  const {domesticServicesTitle} = titles;
+  const domesticServicesMainTitle = generateTitles(`${domesticServicesTitle}`);
+  document.querySelector('.domestic-services-section-container').prepend(domesticServicesMainTitle);
+};
+
+export function subContractServices() {
+  const {subContractServicesTitle} = titles;
+  const subContractServicesMainTitle = generateTitles(`${subContractServicesTitle}`);
+  document.querySelector('.subContract-services-section-container').prepend(subContractServicesMainTitle);
+};
