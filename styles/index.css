@@ -272,10 +272,13 @@ a {
 .quotes-section-container,
 .team-section-container,
 .about-section-container,
-.about-us-page-container,
 .domestic-services-section-container,
 footer {
   padding: 72px 0px;
+}
+
+.about-us-page-container {
+  padding-top: 72px;
 }
 
 .title {
@@ -310,6 +313,12 @@ footer {
   grid-template-columns: repeat(2, 1fr);
   margin-bottom: 72px;
   box-shadow: var(--shadow-2);
+  border: 2px solid var(--grey-200);
+}
+
+.about-page-card-flex:hover {
+  transform: scale(1.005);
+  transition: transform 0.4s ease-in-out;
 }
 
 .about-page-card-image-holder img {
@@ -336,6 +345,17 @@ footer {
   overflow: hidden;
   padding: 5px;
   background-image: url(../images/blob-scene-haikei.png);
+}
+
+.card-container:hover {
+  transform: scale(1.005);
+  transition: transform 0.4s ease-in-out;
+}
+
+.domestic-services-grid .card-container,
+.subContract-services-grid .card-container {
+  background-image: none;
+  border: 2px solid var(--grey-200);
 }
 
 .card-image-holder img {
@@ -452,6 +472,7 @@ footer {
 
 .about-section-container {
   background: url("../images/blob-scene-haikei.png") no-repeat center top/cover;
+  height: 100vh;
 }
 
 .about-section-container .title {
@@ -513,6 +534,10 @@ footer li:not(.location) {
   align-items: center;
 }
 
+.footer-top-content {
+  font-size: 1.1rem;
+}
+
 .footer-top-content a,
 .footer-bottom-content a,
 address {
@@ -555,6 +580,11 @@ address {
 .fab {
   font-size: 1.4rem;
   color: var(--primary-700);
+}
+
+.fab:hover {
+  color: var(--primary-600);
+  transition: color 0.2s ease-in-out;
 }
 
 .footer-bottom-content a {

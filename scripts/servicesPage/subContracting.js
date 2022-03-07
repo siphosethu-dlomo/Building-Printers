@@ -7,10 +7,10 @@ export default function subContractingCards() {
       cardInfoText: "For tender and general pricing"
     },
     {
-      cardImageScr: "images/road.jpg",
+      cardImageScr: "images/roof.jpg",
       cardImageAlt: "People working near a house roof",
       cardTitle: "Roadworks",
-      cardInfoText: "Retaining Walls Kerbs Paving"
+      cardInfoText: "<p>Retaining</p> <p>Walls</p> <p>Kerbs Paving</p>"
     },
     {
       cardImageScr: "images/electrician.jpg",
@@ -28,7 +28,7 @@ export default function subContractingCards() {
       cardImageScr: "images/foundation.jpg",
       cardImageAlt: "Electrician installing a plug socket",
       cardTitle: "Foundations",
-      cardInfoText: "Excavation Filling of foundation with concrete Foundation brickwork up to floor level"
+      cardInfoText: "<p>Excavation Filling of foundation with concrete</p> <p>Foundation brickwork up to floor level</p>"
     },
     {
       cardImageScr: "images/capenter.jpg",
