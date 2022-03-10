@@ -37,9 +37,18 @@ export default function intersectionObserver() {
     }
   };
   
-  const observerOptions = {
+  let observerOptions = {
     rootMargin: '-550px 0px 0px 0px',
   };
+
+  // changing the intersetion observer's rootMargin on diffrent screen size 
+  const mediaQuery = window.matchMedia('(max-width: 35em)');
+
+  if(mediaQuery.matches) {
+    observerOptions = {
+      rootMargin: '-900px 0px 0px 0px',
+    };
+  }
   
   const observer = new IntersectionObserver(observerCallback, observerOptions);
   observer.observe(header);
