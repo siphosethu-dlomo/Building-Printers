@@ -643,15 +643,21 @@ address {
 
 @media (max-width: 35em) {
 
+  .home-page-header::after {
+    opacity: 0.4;
+  }
+
   .primary-nav {
     position: fixed;
     z-index: 1000;
-    inset: 0% 0% 0% 50%;
+    inset: 0% 0% 0% 0%;
     flex-direction: column;
-    padding: min(30vh, 2rem) 1em;
-    background: steelblue;
-    transform: translateX(100%);
+    padding: min(30vh, 5rem) 1em;
+    background: hsl(217 62% 36% / 0.7);
+    backdrop-filter: blur(1rem);
+    transform: translateX(-100%);
     transition: transform 350ms ease-in-out;
+    text-align: center;
   }
 
   .primary-nav[data-visible="true"] {
@@ -675,6 +681,51 @@ address {
   .mobile-nav-toggle[aria-expanded="true"] {
     background-image: url("../images/icon-close.svg");
   }
-}
 
+  .headline {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .headline h1 {
+    font-size: 5.9rem;
+  }
+
+  .headline h3 {
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+  }
+
+  .headline a {
+    font-size: 1.5rem;
+  }
+
+  .services-card-grid,
+  .team-card-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .form-container {
+    grid-template-columns: repeat(1, 1fr);
+    
+  }
+
+  .form-img {
+    display: none;
+  }
+
+  form h4 {
+    text-align: center;
+  }
+
+  .form-title {
+    margin-bottom: 30px;
+  }
+  
+  .form .title-underline {
+    width: 5rem;
+    margin: 0 auto;
+  }
+
+}
 /* HEADER => navigation */
