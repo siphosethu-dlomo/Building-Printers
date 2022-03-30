@@ -641,10 +641,10 @@ address {
 
 /* HEADER => navigation */
 
-@media (max-width: 35em) {
+@media (max-width: 576px) {
 
-  .home-page-header::after {
-    opacity: 0.4;
+  .logo h1 {
+    font-size: 1.5rem;
   }
 
   .primary-nav {
@@ -674,7 +674,7 @@ address {
     width: 2rem;
     border: 0;
     aspect-ratio: 1;
-    top: 2rem;
+    top: 1.5rem;
     right: 2rem;
   }
 
@@ -688,11 +688,11 @@ address {
   }
 
   .headline h1 {
-    font-size: 5.9rem;
+    font-size: 2.5rem;
   }
 
   .headline h3 {
-    font-size: 2.2rem;
+    font-size: 1.4rem;
     margin-bottom: 50px;
   }
 
