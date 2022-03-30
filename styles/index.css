@@ -136,7 +136,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: #000;
   opacity: 0.25;
 }
@@ -152,7 +152,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: rgb(43, 41, 38);
   opacity: 0.35;
 }
@@ -168,7 +168,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: rgb(43, 41, 38);
   opacity: 0.45;
 }
@@ -671,6 +671,7 @@ address {
     background-color: transparent;
     background-image: url("../images/icon-hamburger.svg");
     background-repeat: no-repeat;
+    background-position: center;
     width: 2rem;
     border: 0;
     aspect-ratio: 1;
@@ -680,6 +681,7 @@ address {
 
   .mobile-nav-toggle[aria-expanded="true"] {
     background-image: url("../images/icon-close.svg");
+    background-position: center;
   }
 
   .headline {
