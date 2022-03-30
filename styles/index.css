@@ -643,6 +643,10 @@ address {
 
 @media (max-width: 576px) {
 
+  html {
+    overflow: hidden;
+  }
+
   .logo h1 {
     font-size: 1.5rem;
   }
