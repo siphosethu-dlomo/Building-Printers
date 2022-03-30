@@ -34,5 +34,12 @@ teamSection();
 // ABOUT SECTION
 aboutSectionHeading();
 
+let aboutQuestionTitle = document.querySelector('.about-question-title');
+let mediaQuery = window.matchMedia('(max-width: 576px)');
+
+if(mediaQuery.matches) {
+  aboutQuestionTitle.innerHTML = '<h1 class="about-question-title"> Who We Are? </h1>';
+}
+
 // FOOTER 
 footerSection();

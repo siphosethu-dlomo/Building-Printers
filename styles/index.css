@@ -125,8 +125,6 @@ a {
 /* font & font pairing */
 
 
-/* HEADER => navigation and slider */
-
 .home-page-header {
   background: url("../images/slider-3.jpg") no-repeat center top/cover;
   height: 100vh;
@@ -404,7 +402,6 @@ footer {
 }
 
 .form {
-  /* border-radius: var(--borderRadius); */
   box-shadow: var(--shadow-2);
   padding: 3rem 4.5rem 3rem 4.5rem;
   background-color: var(--white);
@@ -632,14 +629,13 @@ address {
   border-color: var(--error-color);
 }
 
-/* HEADER => navigation and slider */
-
 
 /*==============================================================
                             MOBILE STYLES
 ===============================================================*/
 
-/* HEADER => navigation */
+/* Home Page & General Settings */
+
 
 @media (max-width: 576px) {
 
@@ -711,7 +707,10 @@ address {
 
   .form-container {
     grid-template-columns: repeat(1, 1fr);
-    
+  }
+
+  .form {
+    padding: 3rem 2.5rem 3rem 2.5rem;
   }
 
   .form-img {
@@ -731,5 +730,73 @@ address {
     margin: 0 auto;
   }
 
+  .about-section-container .title {
+    margin-bottom: 60px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid-title {
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .about-grid-title h1 {
+    font-size: 3rem;
+  }
+
+  .about-grid-description {
+    text-align: center;
+  }
+
+  .about-grid-description p {
+    margin-bottom: 36px;
+  }
+
+  footer {
+    height: 92vh;
+  }
+
+  .footer-top-content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-company {
+    margin-bottom: 1.2rem;
+  }
+
+  .footer-top-content h4{
+    margin-bottom: 0.8rem;
+  }
+
+  .footer-bottom-content {
+    margin-top: 24px;
+  }
+
+  /* Services Page */
+
+  .domestic-services-section-container {
+    padding-bottom: 24px;
+  }
+
+  .domestic-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subContract-services-grid {
+    grid-template-columns: 1fr;
+  } 
+
+  /* About Page */
+
+  .about-page-main-content.width-container {
+    width: 85%;
+  }
+
+  .about-page-card-flex {
+    grid-template-columns: 1fr;
+  }
+
 }
-/* HEADER => navigation */

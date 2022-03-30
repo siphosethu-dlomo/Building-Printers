@@ -42,11 +42,11 @@ export default function intersectionObserver() {
   };
 
   // changing the intersetion observer's rootMargin on diffrent screen size 
-  const mediaQuery = window.matchMedia('(max-width: 35em)');
+  const mediaQuery = window.matchMedia('(max-width: 576px)');
 
   if(mediaQuery.matches) {
     observerOptions = {
-      rootMargin: '-900px 0px 0px 0px',
+      rootMargin: '-500px 0px 0px 0px',
     };
   }
   
