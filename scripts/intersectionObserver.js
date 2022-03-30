@@ -5,10 +5,10 @@ export default function intersectionObserver() {
   
   const hoverOnNavListItems = {
   
-    addHoverNavOnListItems() {
+    addHoverNavOnListItems(color) {
       navListItems.forEach( navListItem => {
         navListItem.addEventListener('mouseover', (e) => {
-          e.target.style.backgroundColor = 'var(--primary-700)';
+          e.target.style.backgroundColor = color;
           
           setTimeout(() => {
             e.target.style.backgroundColor = '';
@@ -30,7 +30,13 @@ export default function intersectionObserver() {
   const observerCallback = entries => {
     if(!entries[0].isIntersecting) {
       nav.classList.add('active');
-      hoverOnNavListItems.addHoverNavOnListItems();
+      hoverOnNavListItems.addHoverNavOnListItems('var(--primary-700)');
+
+      // removing hover on smaller screen sizes 
+      const hoverMediaQuery = window.matchMedia('(max-width: 576px)');
+      if(hoverMediaQuery.matches) {
+        hoverOnNavListItems.removeHoverNavOnListItems();
+      };
     } else {
       nav.classList.remove('active');
       hoverOnNavListItems.removeHoverNavOnListItems();
@@ -42,9 +48,9 @@ export default function intersectionObserver() {
   };
 
   // changing the intersetion observer's rootMargin on diffrent screen size 
-  const mediaQuery = window.matchMedia('(max-width: 576px)');
+  const marginMediaQuery = window.matchMedia('(max-width: 576px)');
 
-  if(mediaQuery.matches) {
+  if(marginMediaQuery.matches) {
     observerOptions = {
       rootMargin: '-500px 0px 0px 0px',
     };
