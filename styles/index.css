@@ -829,6 +829,10 @@ address {
     padding-bottom: 24px;
   }
 
+  .subContract-services-section-container h2 {
+    font-size: 2.2rem;
+  }
+
   .domestic-services-grid {
     grid-template-columns: 1fr;
   }
