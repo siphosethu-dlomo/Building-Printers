@@ -35,7 +35,7 @@ teamSection();
 aboutSectionHeading();
 
 let aboutQuestionTitle = document.querySelector('.about-question-title');
-let mediaQuery = window.matchMedia('(max-width: 576px)');
+let mediaQuery = window.matchMedia('(max-width: 992px)');
 
 if(mediaQuery.matches) {
   aboutQuestionTitle.innerHTML = '<h1 class="about-question-title"> Who We Are? </h1>';
