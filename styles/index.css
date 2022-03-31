@@ -698,10 +698,6 @@ address {
     margin-bottom: 50px;
   }
 
-  .headline a {
-    font-size: 1.5rem;
-  }
-
   .services-card-grid,
   .team-card-grid {
     grid-template-columns: repeat(1, 1fr);

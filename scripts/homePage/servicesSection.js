@@ -34,7 +34,8 @@ export default function servicesSection() {
   // more services button
   const buttonContainer = document.createElement('div');
   const button = document.createElement('a');
-  button.setAttribute('href', '#');
+  button.setAttribute('href', './servicesPage.html');
+  button.setAttribute('target', '_blank');
   buttonContainer.classList.add('button-container');
   button.textContent = 'more services';
   buttonContainer.appendChild(button);
