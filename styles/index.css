@@ -634,17 +634,82 @@ address {
                             MOBILE STYLES
 ===============================================================*/
 
-/* Home Page & General Settings */
 
+@media (max-width: 992px) {
 
-@media (max-width: 576px) {
+  /* Home Page & General Settings */
 
-  body {
-    overflow: auto;
+  .primary-nav {
+    gap: 15px;
   }
 
   .logo h1 {
     font-size: 1.5rem;
+  }
+
+  .headline {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .headline h1 {
+    font-size: 6rem;
+  }
+
+  .headline h3 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+  }
+
+  .headline a {
+    font-size: 1.3rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid-title {
+    text-align: center;
+    margin-top: -24px;
+    margin-bottom: 0px;
+  }
+
+  .about-grid-title h1 {
+    font-size: 3rem;
+  }
+
+  .about-grid-description {
+    text-align: center;
+  }
+
+  .about-grid-description p {
+    margin-bottom: 36px;
+  }
+
+  .about-section-container {
+    height: auto;
+  }
+
+  footer {
+    height: auto;
+  }
+
+  /* About Page */
+
+  .about-page-main-content.width-container {
+    width: 85%;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  /* Home Page & General Settings */
+
+  body {
+    overflow: auto;
   }
 
   .primary-nav {
@@ -684,10 +749,15 @@ address {
     background-position: center;
   }
 
-  .headline {
-    text-align: center;
-    padding: 20px;
+  .headline h1 {
+    font-size: 5rem;
   }
+  
+}
+
+@media (max-width: 576px) {
+
+  /* Home Page & General Settings */
 
   .headline h1 {
     font-size: 2.5rem;
@@ -728,37 +798,13 @@ address {
     margin: 0 auto;
   }
 
-  .about-section-container {
-    height: auto;
-  }
-
   .about-section-container .title {
     margin-bottom: 60px;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
   }
 
   .about-grid-title {
     text-align: center;
     margin-bottom: 0px;
-  }
-
-  .about-grid-title h1 {
-    font-size: 3rem;
-  }
-
-  .about-grid-description {
-    text-align: center;
-  }
-
-  .about-grid-description p {
-    margin-bottom: 36px;
-  }
-
-  footer {
-    height: auto;
   }
 
   .footer-top-content {
@@ -793,12 +839,11 @@ address {
 
   /* About Page */
 
-  .about-page-main-content.width-container {
-    width: 85%;
+  .about-us-page-container h2 {
+    font-size: 2.18rem
   }
 
   .about-page-card-flex {
     grid-template-columns: 1fr;
   }
-
 }
