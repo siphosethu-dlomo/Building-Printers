@@ -732,6 +732,10 @@ address {
     margin: 0 auto;
   }
 
+  .about-section-container {
+    height: auto;
+  }
+
   .about-section-container .title {
     margin-bottom: 60px;
   }
@@ -758,7 +762,7 @@ address {
   }
 
   footer {
-    height: 92vh;
+    height: auto;
   }
 
   .footer-top-content {
